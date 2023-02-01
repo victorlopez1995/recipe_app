@@ -1,0 +1,62 @@
+{
+    "community":{
+        "communityName":"the best dessert recipes",
+        "topic":"dessert",
+        "usersSubscribed": 40,
+        "recipes":[
+            "Chocolate Chip Cookies",
+            "Black Forest Cake",
+            "Pecan Pie",
+            "Moist Chocolate Cupcakes",
+            "Fudgy Brownies"
+        ]
+    },
+    "community2":{
+        "communityName":"latin flavor",
+        "topic":"latin food",
+        "usersSubscribed": 25,
+        "recipes":[
+            "Birria Tacos",
+            "Pastel de Choclo",
+            "Dominican Pollo Guisado",
+            "Caldo de Res",
+            "Picadillo"
+        ]
+    },
+    "community3":{
+        "communityName":"soups around the world",
+        "topic":"soup",
+        "usersSubscribed": 32,
+        "recipes":[
+            "Simple Taco Soup",
+            "Creamy Turkey Noodle Soup",
+            "Turkey Wild Rice Soup",
+            "Knoephla Soup",
+            "Classic French Onion Soup"
+        ]
+    },
+        "community4":{
+        "communityName":"the best of asian culture",
+        "topic":"asian food",
+        "usersSubscribed": 15,
+        "recipes":[
+            "Kung Pao Meatballs",
+            "Copycat Panda Express Chow Mein",
+            "Tteokbokki: Spicy Korean Rice Cakes",
+            "Tempura",
+            "Easy Pad Thai"
+        ]
+    },
+        "community5":{
+        "communityName":"drinks at all times",
+        "topic":"drink",
+        "usersSubscribed": 56,
+        "recipes":[
+            "Carioca",
+            "Choco Cayenne",
+            "Coco Chanel",
+            "Cranberry Kiss",
+            "Forest Bull"
+        ]
+    }
+}
