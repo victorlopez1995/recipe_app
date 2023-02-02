@@ -1,0 +1,74 @@
+[
+    {
+        "userEmail": "example@example.com",
+        "recipeName": "Taco Salad",
+        "countryRecipe": "Mexico",
+        "date": "2023-02-01",
+        "ingredients": [
+            "taco shells",
+            "lettuce",
+            "tomatoes",
+            "cheese",
+            "sour cream",
+            "ground beef",
+            "onion",
+            "ground beef"
+        ],
+        "preparation": [
+            "1. Cook the ground beef and onion in a skillet over medium heat, stirring occasionally until browned and cooked through.",
+            "2. Place one taco shell on each plate",
+            "3. Divide the ground beef between the shells, and top with the lettuce, tomatoes, cheese, and sour cream.",
+            "4. Enjoy!"
+        ],
+        "likes": 20
+    },
+    {
+        "userEmail": "example@example.com",
+        "recipeName": "Fried Rice",
+        "countryRecipe": "China",
+        "date": "2023-02-01",
+        "ingredients": [
+            "soy sauce",
+            "onion",
+            "carrots",
+            "peas",
+            "cooked white rice",
+            "garlic",
+            "sesame oil",
+            "eggs"
+        ],
+        "preparation": [
+            "1. In a large bowl, combine the soy sauce, onion, carrots, peas, and garlic. Stir well.",
+            "2. In a separate bowl, combine the sesame oil, eggs, and water. Stir well.",
+            "3. Pour the egg mixture into the onion-carrot mixture. Stir well.",
+            "4. Stir fry rice in a wok or skillet over medium-high heat until the rice is tender, about 3 minutes.",
+            "5. Pour the egg mixture into the rice. Stir well.",
+            "6. Enjoy."
+        ],
+        "likes": 30
+    },
+    {
+        "userEmail": "example@example.com",
+        "recipeName": "Hawaiian Pizza",
+        "countryRecipe": "Canada",
+        "date": "2023-02-01",
+        "ingredients": [
+            "ham",
+            "bbq sauce",
+            "cheese",
+            "pineapple",
+            "red onions",
+            "cilantro"
+        ],
+        "preparation": [
+            "1. Make pizza dough.",
+            "2. Preheat oven to 400 degrees F (200 degrees C).",
+            "3. Roll out dough to desired size.",
+            "4. Add a thin layer of bbq sauce",
+            "5. Add cheese, ham, pineapple and red onions.",
+            "6. Bake for 15 mins. Remove from oven and add chopped cilantro.",
+            "7. Enjoy."
+        ],
+        "likes": 200
+    }
+]
