@@ -1,0 +1,75 @@
+{
+    "user": {
+        "first-name":"Richard ",
+        "last-name":"Santos",
+        "username": "Rich1978",
+        "email": "richard.santos@gmail.com",
+        "password": "riCHARD78",
+        "country": "brazil"
+        
+    },
+        "user-1": {
+        "first-name":"Pamela",
+        "last-name":"Rios",
+        "username": "pameRoss",
+        "email": "pamela.rios@gmail.com",
+        "password": "Pam7475",
+        "country": "Colombia"
+        
+    },
+        "user-2": {
+        "first-name":"Michael",
+        "last-name":"Shawn",
+        "username": "MrShawn",
+        "email": "m.shawn@gmail.com",
+        "password": "Michael99",
+        "country": "united states"
+        
+    },
+        "user-3": {
+        "first-name":"Jessica",
+        "last-name":"Moran",
+        "username": "Jess94",
+        "email": "jessica.moran@gmail.com",
+        "password": "1994Jmor4n",
+        "country": "ecuador"
+        
+    },
+        "user-4": {
+        "first-name":"Jhonatan",
+        "last-name":"Vasquez",
+        "username": "JhonA",
+        "email": "jhonatan.antonio@gmail.com",
+        "password": "V4squ3z82",
+        "country": "peru"
+        
+    },
+        "user-5": {
+        "first-name":"Karen",
+        "last-name":"Espinoza",
+        "username": "Karen89",
+        "email": "karen.espinoza@gmail.com",
+        "password": "KarenES123",
+        "country": "Bolivia"
+        
+    },
+        "user-6": {
+        "first-name":"Albert",
+        "last-name":"Gonzalez",
+        "username": "albertG",
+        "email": "albert.gonzalez@gmail.com",
+        "password": "Albert1996",
+        "country": "Venezuela"
+        
+    },
+        "user-7": {
+        "first-name":"Cristian",
+        "last-name":"Alegre",
+        "username": "Cris971",
+        "email": "cristian.nataniel@gmail.com",
+        "password": "Cristian987",
+        "country": "Argentina"
+        
+    }
+
+}
