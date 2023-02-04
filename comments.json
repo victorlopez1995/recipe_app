@@ -1,0 +1,32 @@
+{
+    "comment":{
+        "email":"test@recepi.com",
+        "date":"2023-02-01",
+        "comment":"This recipe is delicious and low in calories.",
+        "likes": 3
+    },
+    "comment-1":{
+        "email":"test@recepi.com",
+        "date":"2023-02-01",
+        "comment":"I lose 10 pound with this salad I ate daily for two months.",
+        "like": 4
+    },
+    "comment-2":{
+        "email":"test@recepi.com",
+        "date":"2023-02-04",
+        "comment":"my favorite food ever.",
+        "like": 4
+    },
+    "comment-3":{
+        "email":"test@recepi.com",
+        "date":"2023-02-03",
+        "comment":"This food is interesting in my particular situation I don't eat meat will be great add an option for vegans.",
+        "like": 0
+    },
+    "comment-4":{
+        "email":"test@recepi.com",
+        "date":"2023-02-02",
+        "comment":"I love sweet deserts and this one is easy to made.",
+        "like": 1
+    }
+}
