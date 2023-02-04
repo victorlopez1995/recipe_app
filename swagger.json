@@ -306,6 +306,198 @@
           }
         }
       }
+    },
+    "/communities/": {
+      "get": {
+        "tags":["communities"],
+        "summary":"get all communities",
+        "description": "This is for when admin wants to look all infomation about ",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags":["communities"],
+        "summary":"create new community",
+        "description": "This is for when user create a community",
+        "parameters": [
+          {
+            "name": "community",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "communityName": {
+                  "example": "all kinds of burgers"
+                },
+                "topic": {
+                  "example": "fast food"
+                },
+                "usersSubscribed": {
+                  "example": 65
+                },
+                "recipes": {
+                  "example": [
+                    "Bacon-and-Kimchi Burgers",
+                    "Ginger-Sesame Pork Burgers with Slaw",
+                    "Cheddar-and-Onion Smashed Burgers"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          }
+        }
+      }
+    },
+    "/communities/name/{communityName}":{
+      "get": {
+        "tags":["communities"],
+        "description": "This is for when admin wants to look infomation about a specific comunity by name",
+        "parameters": [
+          {
+            "name": "communityName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/communities/topic/{topic}":{
+      "get": {
+        "tags":["communities"],
+        "description": "This is for when admin wants to look infomation about a specific comunity by topic",
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/communities/{id}": {
+      "get": {
+        "tags":["communities"],
+        "description": "This is for when admin wants to look infomation about a specific community",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags":["communities"],
+        "summary":"edit community information",
+        "description": "This is for when user wants to update information about community",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },{
+            "name": "community",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "communityName": {
+                  "example": "all kinds of burgers"
+                },
+                "topic": {
+                  "example": "fast food"
+                },
+                "usersSubscribed": {
+                  "example": 65
+                },
+                "recipes": {
+                  "example": [
+                    "Bacon-and-Kimchi Burgers",
+                    "Ginger-Sesame Pork Burgers with Slaw",
+                    "Cheddar-and-Onion Smashed Burgers"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          }
+        }
+      },
+      "delete": {
+        "tags":["communities"],
+        "summary":"delete community information",
+        "description": "This is for when admin or user wants to delete community information",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
     }
+
   }
 }
