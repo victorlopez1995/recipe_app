@@ -18,6 +18,44 @@
         "responses": {}
       }
     },
+    "/userinfo/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/userinfo/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/recipeinfo/": {
       "get": {
         "description": "",
@@ -312,6 +350,9 @@
         "tags":["communities"],
         "summary":"get all communities",
         "description": "This is for when admin wants to look all infomation about ",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -337,7 +378,7 @@
                   "example": "fast food"
                 },
                 "usersSubscribed": {
-                  "example": 65
+                  "example": "65"
                 },
                 "recipes": {
                   "example": [
@@ -363,54 +404,13 @@
         }
       }
     },
-    "/communities/name/{communityName}":{
-      "get": {
-        "tags":["communities"],
-        "description": "This is for when admin wants to look infomation about a specific comunity by name",
-        "parameters": [
-          {
-            "name": "communityName",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      }
-    },
-    "/communities/topic/{topic}":{
-      "get": {
-        "tags":["communities"],
-        "description": "This is for when admin wants to look infomation about a specific comunity by topic",
-        "parameters": [
-          {
-            "name": "topic",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      }
-    },
     "/communities/{id}": {
       "get": {
         "tags":["communities"],
         "description": "This is for when admin wants to look infomation about a specific community",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -438,27 +438,24 @@
             "in": "path",
             "required": true,
             "type": "string"
-          },{
-            "name": "community",
+          },
+          {
+            "name": "body",
             "in": "body",
             "schema": {
               "type": "object",
               "properties": {
                 "communityName": {
-                  "example": "all kinds of burgers"
+                  "example": "any"
                 },
                 "topic": {
-                  "example": "fast food"
+                  "example": "any"
                 },
                 "usersSubscribed": {
-                  "example": 65
+                  "example": "any"
                 },
                 "recipes": {
-                  "example": [
-                    "Bacon-and-Kimchi Burgers",
-                    "Ginger-Sesame Pork Burgers with Slaw",
-                    "Cheddar-and-Onion Smashed Burgers"
-                  ]
+                  "example": "any"
                 }
               }
             }
@@ -470,9 +467,6 @@
           },
           "400": {
             "description": "Bad Request"
-          },
-          "412": {
-            "description": "Precondition Failed"
           }
         }
       },
@@ -497,7 +491,56 @@
           }
         }
       }
+    },
+    "/communities/name/{communityName}": {
+      "get": {
+        "tags":["communities"],
+        "description": "This is for when admin wants to look infomation about a specific comunity by name",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "communityName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/communities/topic/{topic}": {
+      "get": {
+        "tags":["communities"],
+        "description": "This is for when admin wants to look infomation about a specific comunity by topic",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "topic",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
     }
-
   }
 }
