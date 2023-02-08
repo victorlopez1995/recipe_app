@@ -446,16 +446,20 @@
               "type": "object",
               "properties": {
                 "communityName": {
-                  "example": "any"
+                  "example": "all kinds of burgers"
                 },
                 "topic": {
-                  "example": "any"
+                  "example": "fast food"
                 },
                 "usersSubscribed": {
-                  "example": "any"
+                  "example": "65"
                 },
                 "recipes": {
-                  "example": "any"
+                  "example": [
+                    "Bacon-and-Kimchi Burgers",
+                    "Ginger-Sesame Pork Burgers with Slaw",
+                    "Cheddar-and-Onion Smashed Burgers"
+                  ]
                 }
               }
             }
