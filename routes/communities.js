@@ -19,5 +19,4 @@ router.put('/:id',validation.saveCommunity, controllerCommunities.updateSingle);
 router.delete('/:id', controllerCommunities.deleteSingle);
 
 
-
 module.exports = router;
