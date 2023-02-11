@@ -32,7 +32,23 @@ const getDb = () => {
   return _db;
 };
 
+const closeDb = () => {
+  if (!_db) {
+    throw Error('Db not initialized');
+  }
+  _db.close();
+};
+
+const setDb = (newDb) =>{
+  if (_db) {
+
+    return _db = newDb;
+  }
+}
+
 module.exports = {
   initDb,
   getDb,
+  closeDb,
+  setDb
 };
