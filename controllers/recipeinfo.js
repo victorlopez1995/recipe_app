@@ -15,7 +15,7 @@ const getSingle = async (req, res, next) => {
     const recipeId = new ObjectId(req.params.id);
     const result = await mongodb
       .getDb()
-      .db()
+      .db()//this possible error for the []
       .collection('recipeinfo')
       .find({ _id: recipeId });
     result.toArray().then((lists) => {

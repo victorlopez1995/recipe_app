@@ -1,18 +1,19 @@
 const express = require('express');
 const router = express.Router();
-
+const { requiresAuth } = require('express-openid-connect');
 const controllerComments= require('../controllers/comments');
 
 
-router.get('/', controllerComments.getAllComments);
 
-router.get('/:id', controllerComments.getSingleComment);
+router.get('/', requiresAuth(), controllerComments.getAllComments);
 
-router.post('/', controllerComments.createComment);
+router.get('/:id', requiresAuth(), controllerComments.getSingleComment);
 
-router.put('/:id', controllerComments.updateComment);
+router.post('/', requiresAuth(), controllerComments.createComment);
 
-router.delete('/:id', controllerComments.deleteComment);
+router.put('/:id', requiresAuth(), controllerComments.updateComment);
+
+router.delete('/:id', requiresAuth(), controllerComments.deleteComment);
 
 
 
