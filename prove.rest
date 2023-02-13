@@ -1,0 +1,14 @@
+### 
+POST http://localhost:8080/communities HTTP/1.1 
+Content-type: application/json
+
+{
+   "communityName": "all kinds of burgers",
+   "topic": "fast food",
+   "usersSubscribed": 65,
+   "recipes": [
+     "Bacon-and-Kimchi Burgers",
+     "Ginger-Sesame Pork Burgers with Slaw",
+     "Cheddar-and-Onion Smashed Burgers"
+   ]
+}
