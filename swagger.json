@@ -58,64 +58,75 @@
     },
     "/recipeinfo/": {
       "get": {
-        "description": "",
+        "description": "Endpoint for retrieving all recipes",
         "produces": [
           "application/json"
         ],
         "parameters": [],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Recipes retrieved successfully"
           }
         }
       },
       "post": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "Endpoint for creating a new recipe. Expects a JSON object containing the recipe information in the request body",
+      "produces": [
+         "application/json"
+      ],
+      "parameters": [
+         {
             "name": "body",
             "in": "body",
+            "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "userEmail": {
-                  "example": "any"
-                },
-                "recipeName": {
-                  "example": "any"
-                },
-                "countryRecipe": {
-                  "example": "any"
-                },
-                "date": {
-                  "example": "any"
-                },
-                "ingredients": {
-                  "example": "any"
-                },
-                "preparation": {
-                  "example": "any"
-                }
-              }
+               "type": "object",
+               "properties": {
+                  "userEmail": {
+                     "type": "string"
+                  },
+                  "recipeName": {
+                     "type": "string"
+                  },
+                  "countryRecipe": {
+                     "type": "string"
+                  },
+                  "date": {
+                     "type": "string",
+                     "format": "date"
+                  },
+                  "ingredients": {
+                     "type": "array",
+                     "items": {
+                        "type": "string"
+                     }
+                  },
+                  "preparation": {
+                     "type": "array",
+                     "items": {
+                        "type": "string"
+                     }
+                  }
+               }
             }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+         }
+      ],
+      "responses": {
+         "201": {
+            "description": "Recipe created successfully"
+         },
+         "400": {
+            "description": "Bad request"
+         },
+         "500": {
+            "description": "Internal server error"
+         }
         }
       }
     },
     "/recipeinfo/{id}": {
       "get": {
-        "description": "",
+        "description": "Endpoint for retrieving a recipe by its id",
         "produces": [
           "application/json"
         ],
@@ -137,54 +148,61 @@
         }
       },
       "put": {
-        "description": "",
-        "parameters": [
-          {
+      "description": "Endpoint for updating a recipe by its ID.",
+      "parameters": [
+         {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
-          },
-          {
+         },
+         {
             "name": "body",
             "in": "body",
             "schema": {
-              "type": "object",
-              "properties": {
-                "userEmail": {
-                  "example": "any"
-                },
-                "recipeName": {
-                  "example": "any"
-                },
-                "countryRecipe": {
-                  "example": "any"
-                },
-                "date": {
-                  "example": "any"
-                },
-                "ingredients": {
-                  "example": "any"
-                },
-                "preparation": {
-                  "example": "any"
-                }
-              }
+               "type": "object",
+               "properties": {
+                  "userEmail": {
+                     "type": "string"
+                  },
+                  "recipeName": {
+                     "type": "string"
+                  },
+                  "countryRecipe": {
+                     "type": "string"
+                  },
+                  "date": {
+                     "type": "string",
+                     "format": "date"
+                  },
+                  "ingredients": {
+                     "type": "array",
+                     "items": {
+                        "type": "string"
+                     }
+                  },
+                  "preparation": {
+                     "type": "array",
+                     "items": {
+                        "type": "string"
+                     }
+                  }
+               }
             }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "422": {
-            "description": "Unprocessable Entity"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      },
+         }
+      ],
+      "responses": {
+         "200": {
+            "description": "Recipe updated successfully"
+         },
+         "404": {
+            "description": "Recipe not found"
+         },
+         "500": {
+            "description": "Internal server error"
+         }
+      }
+   },
       "delete": {
         "description": "",
         "parameters": [
@@ -197,10 +215,10 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": " Recipe Deleted Successfully"
           },
           "404": {
-            "description": "Not Found"
+            "description": "Recipe Not Found"
           },
           "500": {
             "description": "Internal Server Error"
