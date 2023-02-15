@@ -21,11 +21,11 @@ const getSingle = async (req, res, next) => {
       res.setHeader('Content-Type', 'application/json');
       res.status(200).json(lists[0]);
     }).catch((err) => {
-      console.error("Error getting single user", err);
+      console.error("Error getting single user.", err);
       res.status(500).json({ message: 'An error occurred while getting a single user.', error: err });
     });
   } catch (error) {
-    console.error("Error getting single user", error);
+    console.error("Error getting single user.", error);
     res.status(500).json({ message: 'An error occurred while getting a single user.', error });
   }
 };
